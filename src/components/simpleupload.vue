@@ -22,6 +22,7 @@
     </div>
     <div class="field">
       <button class="button-is-info">send</button>
+      <button  @click="$emit('onPreview')" class="button-is-info" type="button">preview</button>
     </div>
   </form>
 

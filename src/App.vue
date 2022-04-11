@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import imagepreview from "@/components/imagepreview"
 import Select from "@/components/selection"
 import Field from "@/components/simpleupload"
 import Foot from "@/components/foot"
@@ -18,7 +17,7 @@ import Head from "@/components/header"
 export default {
   name: "App",
   components:{
-    imagepreview,Select,Field,Foot,Head
+    Select,Field,Foot,Head
   }
 };
 </script>

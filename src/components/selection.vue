@@ -12,7 +12,7 @@
             <label class="form-check-label" :for="item.id">{{item.name}}</label>
             
             <div v-if="selecteditem == item.id">
-                <upload/>
+                <upload @onPreview="generateReport"/>
             </div>
         </div>
     <div class="form-check" v-for="item in Its" v-bind:key="item.id">
@@ -77,6 +77,22 @@ export default {
         };
     },
     methods: {
+         generateReport(){
+      console.log("****");
+      let reportDefination=[
+          {style:'header',fontSize:14,bold:true,alignment:'center',text:'SARDAR VALLABHBHAI PATEL INSTITUTE OF TECHNOLOGY,VASAD'},
+          {style:'header',fontSize:14,bold:true,alignment:'center',text:''},
+      ]
+      var pdfMake = require('pdfmake/build/pdfmake.js')
+          if (pdfMake.vfs == undefined){
+            var pdfFonts = require('pdfmake/build/vfs_fonts.js')
+            pdfMake.vfs = pdfFonts.pdfMake.vfs;
+          }
+          pdfMake.createPdf({pageOrientation:'landscape',
+            content:reportDefination,
+            defaultStyle:{fontSize:11}
+          }).open()
+    },
         handleSubmit() {
             alert(JSON.stringify(this.user));
         }

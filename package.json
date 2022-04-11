@@ -10,6 +10,7 @@
   "dependencies": {
     "@vue/cli-plugin-babel": "^5.0.4",
     "axios": "^0.26.1",
+    "pdfmake": "^0.2.5",
     "vue": "^2.6.11",
     "vue-router": "^3.5.3"
   },
