@@ -81,8 +81,58 @@ export default {
       console.log("****");
       let reportDefination=[
           {style:'header',fontSize:14,bold:true,alignment:'center',text:'SARDAR VALLABHBHAI PATEL INSTITUTE OF TECHNOLOGY,VASAD'},
-          {style:'header',fontSize:14,bold:true,alignment:'center',text:''},
-      ]
+                     { 
+                alignment: 'center',
+                text: 'PPRA',
+                style: 'header',
+                fontSize: 23,
+                bold: true,
+                margin: [0, 10],
+            },
+            
+                   {
+                        
+                        text: 'This is to certify that Mr./Ms. ______________________________ S/o or D/O of',
+                        fontSize: 9,
+                        bold: true,
+                        margin:[0,10]
+                            
+                   },
+                   {
+                       
+                        text: 'Mr./Ms. ______________________ bearing Enrollment No._______________ is a',
+                        fontSize: 9,
+                        bold: true,
+                        margin:[0,10]
+                        
+                   },
+                   {
+                       
+                        text: 'student of _________ (year) ___________________ (course name) for the ',
+                        fontSize: 9,
+                        bold: true,
+                        
+                   },
+                   {
+                       
+                        text: 'academic year ___________ . He/She is a bonafied student of ',
+                        fontSize: 9,
+                        bold: true,
+                        
+                   },
+                   {
+                       
+                        text: '______________________ (College)',
+                        fontSize: 9,
+                        bold: true,
+                        
+                   }
+
+               ]
+            
+            
+        
+    
       var pdfMake = require('pdfmake/build/pdfmake.js')
           if (pdfMake.vfs == undefined){
             var pdfFonts = require('pdfmake/build/vfs_fonts.js')
