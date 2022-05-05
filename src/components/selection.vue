@@ -113,20 +113,21 @@ export default {
                         text: 'student of _________ (year) ___________________ (course name) for the ',
                         fontSize: 23,
                         bold: true,
-                        
+                        margin:[0,10]
                    },
                    {
                        
                         text: 'academic year ___________ . He/She is a bonafied student of ',
                         fontSize: 23,
                         bold: true,
-                        
+                        margin:[0,10]
                    },
                    {
                        
                         text: '______________________ (College)',
                         fontSize: 23,
                         bold: true,
+                        margin:[0,10]
                         
                    },
                    {
@@ -134,7 +135,7 @@ export default {
                        bold:true,
                        fontSize: 20,
                        alignment:"left",
-                       margin:[0,20],
+                       margin:[0,30],
 
                    },
                    {
@@ -143,14 +144,14 @@ export default {
                        bold:true,
                        fontSize: 20,
                        alignment:'left',
-                       margin:[0,10]
+                       margin:[0,-15]
                    },
                    {
                        text:"___________________",
                        bold:true,
                        fontSize: 20,
                        alignment:"center",
-                       margin:[0,0],
+                       margin:[0,-47],
 
                    },
                    {
@@ -158,7 +159,7 @@ export default {
                        bold:true,
                        fontSize: 20,
                        alignment:"center",
-                       margin:[0,10],
+                       margin:[0,62],
 
                    },
 
@@ -168,21 +169,21 @@ export default {
                        bold:true,
                        fontSize: 20,
                        alignment:"center",
-                       margin:[0,10],
+                       margin:[0,-50],
                    },
                    {
                        text:"___________________",
                        bold:true,
                        fontSize: 20,
                        alignment:"right",
-                       margin:[0,10],
+                       margin:[0,-47],
                    },
                    {     
                        text:"Date",
                        bold:true,
                        fontSize: 20,
                        alignment:"right",
-                       margin:[0,10],
+                       margin:[10,60],
 
  
                    },
