@@ -80,17 +80,23 @@ export default {
          generateReport(){
       console.log("****");
       let reportDefination=[
-          {style:'header',fontSize:14,bold:true,alignment:'center',text:'SARDAR VALLABHBHAI PATEL INSTITUTE OF TECHNOLOGY,VASAD'},
+          {style:'header',fontSize:24,margin:[0,37],bold:true,alignment:'center',text:'SARDAR VALLABHBHAI PATEL INSTITUTE OF TECHNOLOGY,VASAD'},
              
                   { 
                 alignment: 'center',
                 text: 'Bonafied Certificate',
                 style: 'header',
-                fontSize: 23,
+                fontSize: 24,
                 bold: true,
-                margin: [0, 10],
+                margin: [0,-19],
             },
-            
+            {
+                alignment: 'center',
+                text: '_____________________',
+                fontSize: 24,
+                bold: true,
+                margin: [0,0],
+            },
                    {
                         
                         alignment:"center",
