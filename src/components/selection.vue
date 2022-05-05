@@ -81,9 +81,10 @@ export default {
       console.log("****");
       let reportDefination=[
           {style:'header',fontSize:14,bold:true,alignment:'center',text:'SARDAR VALLABHBHAI PATEL INSTITUTE OF TECHNOLOGY,VASAD'},
-                     { 
+             
+                  { 
                 alignment: 'center',
-                text: 'PPRA',
+                text: 'Bonafied Certificate',
                 style: 'header',
                 fontSize: 23,
                 bold: true,
@@ -92,8 +93,9 @@ export default {
             
                    {
                         
+                        alignment:"center",
                         text: 'This is to certify that Mr./Ms. ______________________________ S/o or D/O of',
-                        fontSize: 9,
+                        fontSize: 23,
                         bold: true,
                         margin:[0,10]
                             
@@ -101,7 +103,7 @@ export default {
                    {
                        
                         text: 'Mr./Ms. ______________________ bearing Enrollment No._______________ is a',
-                        fontSize: 9,
+                        fontSize: 23,
                         bold: true,
                         margin:[0,10]
                         
@@ -109,24 +111,83 @@ export default {
                    {
                        
                         text: 'student of _________ (year) ___________________ (course name) for the ',
-                        fontSize: 9,
+                        fontSize: 23,
                         bold: true,
                         
                    },
                    {
                        
                         text: 'academic year ___________ . He/She is a bonafied student of ',
-                        fontSize: 9,
+                        fontSize: 23,
                         bold: true,
                         
                    },
                    {
                        
                         text: '______________________ (College)',
-                        fontSize: 9,
+                        fontSize: 23,
                         bold: true,
                         
-                   }
+                   },
+                   {
+                       text:"___________________",
+                       bold:true,
+                       fontSize: 20,
+                       alignment:"left",
+                       margin:[0,20],
+
+                   },
+                   {
+                       
+                       text:"Signature Principal",
+                       bold:true,
+                       fontSize: 20,
+                       alignment:'left',
+                       margin:[0,10]
+                   },
+                   {
+                       text:"___________________",
+                       bold:true,
+                       fontSize: 20,
+                       alignment:"center",
+                       margin:[0,0],
+
+                   },
+                   {
+                       text:"College Name and Address",
+                       bold:true,
+                       fontSize: 20,
+                       alignment:"center",
+                       margin:[0,10],
+
+                   },
+
+                   {
+                     
+                       text:"(Official Seal)",
+                       bold:true,
+                       fontSize: 20,
+                       alignment:"center",
+                       margin:[0,10],
+                   },
+                   {
+                       text:"___________________",
+                       bold:true,
+                       fontSize: 20,
+                       alignment:"right",
+                       margin:[0,10],
+                   },
+                   {     
+                       text:"Date",
+                       bold:true,
+                       fontSize: 20,
+                       alignment:"right",
+                       margin:[0,10],
+
+ 
+                   },
+
+
 
                ]
             
