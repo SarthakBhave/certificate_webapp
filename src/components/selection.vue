@@ -149,7 +149,9 @@ export default {
             return "none"
             }
         
-    }
+    },
+    
+
 },
            
 
@@ -165,7 +167,7 @@ export default {
     
         
       let reportDefination=[
-          {style:'header',fontSize:26,margin:[0,20],bold:true,alignment:'center',text:'SARDAR VALLABHBHAI PATEL INSTITUTE OF TECHNOLOGY'},
+          {style:'header',fontSize:26,margin:[0,7],bold:true,alignment:'center',text:'SARDAR VALLABHBHAI PATEL INSTITUTE OF TECHNOLOGY'},
                { 
                 alignment:'center',
                 text: 'VASAD-388 306',
@@ -186,6 +188,13 @@ export default {
                 bold: true,
                 margin: [0,-11],
             },
+             { 
+                alignment:'left',
+                text: 'Certificate No.:',
+                fontSize: 22,
+                bold: true,
+                margin: [0,10],
+            },
                { 
                 alignment:'right',
                 text: `Date: ${today}`,
@@ -199,62 +208,23 @@ export default {
                 style : 'header',
                 fontSize: 24,
                 bold: true,
-                margin: [0,15],
+                margin: [0,10],
             },
                  {
                         
                         
-                        text: `This is to certify that  ${this.studentdata?.stuTitle} ${this.studentdata.stuFirstname} ${this.studentdata.stuMiddlename?this.studentdata.stuMiddlename:""} ${this.studentdata.stuLastname?this.studentdata.stuLastname:""} is a bonafied student of this college presently studying at ${this.studentdata.fcurrsem}th Sem ${this.getyear} Year B.E.(${this.getdept}) level and bears Identification Number ${this.studentdata.stuEnroll} 
-                        Purpose: `,
+                        text: `This is to certify that  ${this.studentdata?.stuTitle} ${this.studentdata.stuFirstname} ${this.studentdata.stuMiddlename?this.studentdata.stuMiddlename:""} ${this.studentdata.stuLastname?this.studentdata.stuLastname:""} is a bonafied student of this college presently studying at ${this.studentdata.fcurrsem}th Sem ${this.getyear} Year B.E.(${this.getdept}) level and bears Identification Number ${this.studentdata.stuEnroll} .
+                        Purpose:`,
                         fontSize: 23,
                         bold: true,
+                        margin:[0,10]
                         
-                        
-                            
-                   },
+                },{
+                    text:'___________________________________________________________________________________',
+                    fontSize:20,
+                    margin:[0,3]
+                },
                
-                   {
-                       text:"___________________",
-                       bold:true,
-                       fontSize: 20,
-                       alignment:"left",
-                       margin:[0,30],
-
-                   },
-                   {
-                       
-                       text:"Signature Principal",
-                       bold:true,
-                       fontSize: 20,
-                       alignment:'left',
-                       margin:[0,-15]
-                   },
-                   {
-                       text:"___________________",
-                       bold:true,
-                       fontSize: 20,
-                       alignment:"center",
-                       margin:[0,-47],
-
-                   },
-                   {
-                       text:"College Name and Address",
-                       bold:true,
-                       fontSize: 20,
-                       alignment:"center",
-                       margin:[0,62],
-
-                   },
-
-                   {
-                     
-                       text:"(Official Seal)",
-                       bold:true,
-                       fontSize: 20,
-                       alignment:"center",
-                       margin:[0,-50],
-                   },
-                  
 
 
                ]
