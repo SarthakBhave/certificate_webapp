@@ -76,6 +76,84 @@ export default {
             }
         };
     },
+    
+    computed: {
+  getyear() {
+    switch (this.studentdata.fcurrsem) 
+    {   
+       case 1:
+            if (this.studentdata.fcurrsem =  '1')
+            return 'First';
+        case 2:
+            if (this.studentdata.fcurrsem =  '2')
+            return 'First';
+        case 3:
+            if (this.studentdata.fcurrsem =  '3')
+            return 'Second';
+        case 4:
+            if (this.studentdata.fcurrsem =  '4')
+            return 'Second';
+        case 5:
+            if (this.studentdata.fcurrsem =  '5')
+            return 'Third';
+        case 6:
+            if (this.studentdata.fcurrsem =  '6')
+            return 'Third';
+        case 7:
+            if (this.studentdata.fcurrsem =  '7')
+            return 'Fourth';
+        case 8:
+            if (this.studentdata.fcurrsem = "8")
+            return 'Fourth'
+        default:
+            return "none"
+            } 
+    },
+    getdept(){
+        switch(this.studentdata.fDeptId)
+        {
+        case 1:
+            if (this.studentdata.fDeptId = '1')
+            return "Computer Engineering"
+        case 2:
+            if (this.studentdata.fDeptId = '2')
+            return "Information Technology"
+        case 3:
+            if (this.studentdata.fDeptId = '3')
+            return "Civil Engineering"
+        case 4:
+            if (this.studentdata.fDeptId = '4')
+            return "Electronics and Communication Engineering"
+        case 5:
+            if (this.studentdata.fDeptId = '5')
+            return "Mechanical Engineering"
+        case 6:
+            if (this.studentdata.fDeptId = '6')
+            return "Electrical Engineering"
+        case 7:
+            if (this.studentdata.fDeptId = '8')
+            return "Aeronautical Engineering"
+        case 8:
+            if (this.studentdata.fDeptId = '9')
+            return "Instumentation and Control Engineering"
+        case 9:
+            if (this.studentdata.fDeptId = '10')
+            return "Master of Computer Application"
+        case 10:
+            if (this.studentdata.fDeptId = '11')
+            return "Other"
+        case 11:
+            if (this.studentdata.fDeptId = '12')
+            return "Architecture"
+        default:
+            return "none"
+            }
+        
+    }
+},
+           
+
+
     methods: {
          generateReport(){
       console.log("****");
@@ -83,9 +161,9 @@ export default {
          var dd = String(today.getDate()).padStart(2, '0');
          var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
          var yyyy = today.getFullYear();
-
-          today = mm + '/' + dd + '/' + yyyy;
-
+     today = dd + '/' + mm + '/' + yyyy;
+    
+        
       let reportDefination=[
           {style:'header',fontSize:26,margin:[0,20],bold:true,alignment:'center',text:'SARDAR VALLABHBHAI PATEL INSTITUTE OF TECHNOLOGY'},
                { 
@@ -126,7 +204,8 @@ export default {
                  {
                         
                         
-                        text: `This is to certify that  ${this.studentdata?.stuTitle} ${this.studentdata.stuFirstname} ${this.studentdata.stuMiddlename?this.studentdata.stuMiddlename:""} ${this.studentdata.stuLastname?this.studentdata.stuLastname:""} ${this.studentdata.stuGender=="Female"?"D/O":"S/O"} ofMr./Ms. ${this.studentdata.stuMiddlename} bearing Enrollment No. ${this.studentdata.stuEnroll} is astudent of _________ (year) ___________________ (course name) for theacademic year ___________ . He/She is a bonafied student of______________________ (College).`,
+                        text: `This is to certify that  ${this.studentdata?.stuTitle} ${this.studentdata.stuFirstname} ${this.studentdata.stuMiddlename?this.studentdata.stuMiddlename:""} ${this.studentdata.stuLastname?this.studentdata.stuLastname:""} is a bonafied student of this college presently studying at ${this.studentdata.fcurrsem}th Sem ${this.getyear} Year B.E.(${this.getdept}) level and bears Identification Number ${this.studentdata.stuEnroll} 
+                        Purpose: `,
                         fontSize: 23,
                         bold: true,
                         
