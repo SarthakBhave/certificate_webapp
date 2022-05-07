@@ -108,48 +108,47 @@ export default {
         default:
             return "none"
             } 
-    },
-    getdept(){
-        switch(this.studentdata.fDeptId)
-        {
-        case 1:
-            if (this.studentdata.fDeptId = '1')
-            return "Computer Engineering"
-        case 2:
-            if (this.studentdata.fDeptId = '2')
-            return "Information Technology"
-        case 3:
-            if (this.studentdata.fDeptId = '3')
-            return "Civil Engineering"
-        case 4:
-            if (this.studentdata.fDeptId = '4')
-            return "Electronics and Communication Engineering"
-        case 5:
-            if (this.studentdata.fDeptId = '5')
-            return "Mechanical Engineering"
-        case 6:
-            if (this.studentdata.fDeptId = '6')
-            return "Electrical Engineering"
-        case 7:
-            if (this.studentdata.fDeptId = '8')
-            return "Aeronautical Engineering"
-        case 8:
-            if (this.studentdata.fDeptId = '9')
-            return "Instumentation and Control Engineering"
-        case 9:
-            if (this.studentdata.fDeptId = '10')
-            return "Master of Computer Application"
-        case 10:
-            if (this.studentdata.fDeptId = '11')
-            return "Other"
-        case 11:
-            if (this.studentdata.fDeptId = '12')
-            return "Architecture"
-        default:
-            return "none"
-            }
+    }      
+        // switch(this.studentdata.fDeptId)
+        // {
+        // case 1:
+        //     if (this.studentdata.fDeptId = '1')
+        //     return "Computer Engineering"
+        // case 2:
+        //     if (this.studentdata.fDeptId = '2')
+        //     return "Information Technology"
+        // case 3:
+        //     if (this.studentdata.fDeptId = '3')
+        //     return "Civil Engineering"
+        // case 4:
+        //     if (this.studentdata.fDeptId = '4')
+        //     return "Electronics and Communication Engineering"
+        // case 5:
+        //     if (this.studentdata.fDeptId = '5')
+        //     return "Mechanical Engineering"
+        // case 6:
+        //     if (this.studentdata.fDeptId = '6')
+        //     return "Electrical Engineering"
+        // case 7:
+        //     if (this.studentdata.fDeptId = '8')
+        //     return "Aeronautical Engineering"
+        // case 8:
+        //     if (this.studentdata.fDeptId = '9')
+        //     return "Instumentation and Control Engineering"
+        // case 9:
+        //     if (this.studentdata.fDeptId = '10')
+        //     return "Master of Computer Application"
+        // case 10:
+        //     if (this.studentdata.fDeptId = '11')
+        //     return "Other"
+        // case 11:
+        //     if (this.studentdata.fDeptId = '12')
+        //     return "Architecture"
+        // default:
+        //     return "none"
+        //     }
         
-    },
+    
     
 
 },
@@ -157,15 +156,23 @@ export default {
 
 
     methods: {
-         generateReport(){
+        async getdept(){
+        const credential = localStorage.getItem("credentials")
+        const url = `http://10.10.104.87:4040/cmsdbapi/DepartmentInfos/${this.studentdata.fDeptId}?access_token=${credential}`
+        const response = await axios.get(url) 
+   return response.data?response.data.deptName:"-" 
+},
+
+   async    generateReport(){
       console.log("****");
          var today = new Date();
          var dd = String(today.getDate()).padStart(2, '0');
          var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
          var yyyy = today.getFullYear();
      today = dd + '/' + mm + '/' + yyyy;
-    
-        
+    let deptName = await this.getdept()
+        console.log("*****",deptName);
+
       let reportDefination=[
           {style:'header',fontSize:26,margin:[0,7],bold:true,alignment:'center',text:'SARDAR VALLABHBHAI PATEL INSTITUTE OF TECHNOLOGY'},
                { 
@@ -213,7 +220,7 @@ export default {
                  {
                         
                         
-                        text: `This is to certify that  ${this.studentdata?.stuTitle} ${this.studentdata.stuFirstname} ${this.studentdata.stuMiddlename?this.studentdata.stuMiddlename:""} ${this.studentdata.stuLastname?this.studentdata.stuLastname:""} is a bonafied student of this college presently studying at ${this.studentdata.fcurrsem}th Sem ${this.getyear} Year B.E.(${this.getdept}) level and bears Identification Number ${this.studentdata.stuEnroll} .
+                        text: `This is to certify that  ${this.studentdata?.stuTitle} ${this.studentdata.stuFirstname} ${this.studentdata.stuMiddlename?this.studentdata.stuMiddlename:""} ${this.studentdata.stuLastname?this.studentdata.stuLastname:""} is a bonafied student of this college presently studying at ${this.studentdata.fcurrsem}th Sem ${this.getyear} Year B.E.(${deptName}) level and bears Identification Number ${this.studentdata.stuEnroll} .
                         Purpose:`,
                         fontSize: 23,
                         bold: true,
@@ -248,7 +255,8 @@ export default {
 
     },
    async mounted(){
-        const userId = localStorage.getItem("userId")
+       
+       const userId = localStorage.getItem("userId")
         const credential = localStorage.getItem("credentials")
         const url = `http://10.10.104.87:4040/cmsdbapi/UserAccounts/${userId}?access_token=${credential}`
         const response = await axios.get(url)
