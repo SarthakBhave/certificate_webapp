@@ -68,7 +68,9 @@ const getreport1 = async(currentyear, deptName, studentdata) => {
 
 
     ]
+
     console.log(reportDefination);
     return reportDefination
 }
+
 export default getreport1;

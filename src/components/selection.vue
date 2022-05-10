@@ -14,6 +14,8 @@
             <div v-if="selecteditem == item.id">
                 <upload @onPreview="generateReport"/>
             </div>
+            
+        
         </div>
     <div class="form-check" v-for="item in Its" v-bind:key="item.id">
         <label class="form-other" :for="item.id">{{item.name}}
@@ -36,8 +38,7 @@
 import axios from 'axios';
 import Datas from './datas.vue';
 import upload from './simpleupload.vue';
-import getreport from '@/js/fees.js';
-import getreport1 from '@/js/bonafied.js'
+import getreport from '@/js/report.js';
 
 export default {  
     components: {Datas,upload},
@@ -48,6 +49,7 @@ export default {
             Items: [
                 { id:1,
                     name: 'Bonafied Certificate'
+                   
                 }, 
                 { id:2,
                     name: 'Fee Structure Certificate'
@@ -127,9 +129,8 @@ export default {
    async    generateReport(){
       console.log("****");
     let deptName = await this.getdept()
-    let reportDefination =  await getreport1(this.getyear,deptName,this.studentdata)
          
-    let reportDefination1=  await getreport(this.getyear,deptName,this.studentdata)
+    let reportDefination1=  await getreport(this.user.Certicollection,this.getyear,deptName,this.studentdata)
          
             
             
@@ -140,7 +141,8 @@ export default {
             var pdfFonts = require('pdfmake/build/vfs_fonts.js')
             pdfMake.vfs = pdfFonts.pdfMake.vfs;
           }
-          pdfMake.createPdf({pageOrientation:'portrait',
+          pdfMake.createPdf({ pageOrientation:'portrait',
+
             content:reportDefination1,
             defaultStyle:{fontSize:11}
           }).open()
@@ -212,4 +214,4 @@ export default {
     font-size: 20px;
     text-align: center;
 }
-</style>
+</style>    
