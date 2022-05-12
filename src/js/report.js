@@ -10,9 +10,9 @@ const getreport = (name, currentyear, deptName, studentdata) => {
         return feereport(currentyear, deptName, studentdata)
     if (name == 'Course Completion Certificate')
         return coursereport(currentyear, deptName, studentdata)
-    if (name = 'Passing Certificate')
+    if (name == 'Passing Certificate')
         return passreport(currentyear, deptName, studentdata)
-    if (name = 'First attempt Certificate')
+    if (name == 'First attempt Certificate')
         return firstattempt(currentyear, deptName, studentdata)
 
 }

@@ -53,17 +53,14 @@ export default {
                 }, 
                 { id:2,
                     name: 'Fee Structure Certificate'
-                }, 
+                },  
                 { id:3,
-                    name: 'Medium of instruction Certificate'
-                }, 
-                { id:4,
                     name: 'Course Completion Certificate'
                 },
-                { id:5,
+                { id:4,
                     name: 'Passing Certificate'
                 },
-                { id:6,
+                { id:5,
                     name: 'First attempt Certificate'
                 }                
             ],            
@@ -127,7 +124,6 @@ export default {
 },
 
    async    generateReport(){
-      console.log("****");
     let deptName = await this.getdept()
          
     let reportDefination1=  await getreport(this.user.Certicollection,this.getyear,deptName,this.studentdata)

@@ -4,7 +4,7 @@
     <p><b>Student ID: </b>{{studentdata.stuCollegeId}}</p>
     <p><b>Mobile Number:</b> {{studentdata.stuMobile}}</p>
     <p><b>Department:</b> {{studentdata.fDeptId}}</p> 
-    <p><b>Gender:</b> {{studentdata.stuGender}}</p>
+    <p><b>Gender:</b> {{studentdata.stuGender = "Female"?"Female":"Male"}}</p>
     
 </div>    
 

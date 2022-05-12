@@ -20,7 +20,7 @@ const getreport4 = async(currentyear, deptName, studentdata) => {
         },
 
         {
-            text: `This is to certify that ${studentdata.stuGender="Female"?"Miss":"Mr"} ${studentdata.stuTitle} ${studentdata.stuFirstname} ${studentdata.stuMiddlename} ${studentdata.stuLastname}(${studentdata.stuEnroll}) has been bonafide student of Four-yeardegree course in B.E. __________________________________________ since _______________. ${studentdata.stuGender="Female"?"Her":"His"} result of B.E. semester I, II, III, IV, V, VI & VII examinations conducted by Gujarat Technology University have been declared and she has passed in all of them(CGPA______)`,
+            text: `This is to certify that ${studentdata.stuGender="Female"?"Miss":"Mr"} ${studentdata.stuTitle} ${studentdata.stuFirstname} ${studentdata.stuMiddlename} ${studentdata.stuLastname}(${studentdata.stuEnroll}) has been bonafide student of Four-yeardegree course in B.E. ${deptName} since _______________. ${studentdata.stuGender="Female"?"Her":"His"} result of B.E. semester I, II, III, IV, V, VI & VII examinations conducted by Gujarat Technology University have been declared and she has passed in all of them(CGPA______)`,
             fontSize: 20,
             margin: [0, 20],
         },
