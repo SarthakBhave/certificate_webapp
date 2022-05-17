@@ -56,7 +56,7 @@ const getreport1 = async(currentyear, deptName, studentdata) => {
 
             text: `This is to certify that  ${studentdata?.stuTitle} ${studentdata.stuFirstname} ${studentdata.stuMiddlename?studentdata.stuMiddlename:""} ${studentdata.stuLastname?studentdata.stuLastname:""} is a bonafied student of this college presently studying at ${studentdata.fcurrsem}th Sem ${currentyear} Year B.E.(${deptName}) level and bears Identification Number ${studentdata.stuEnroll} .
                         Purpose:`,
-            fontSize: 23,
+            fontSize: 19,
             bold: true,
             margin: [0, 10]
 

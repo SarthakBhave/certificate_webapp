@@ -7,41 +7,41 @@ const getreport4 = async(currentyear, deptName, studentdata) => {
     today = dd + '/' + mm + '/' + yyyy;
     console.log("*****", deptName);
     let reportDefination4 = [{
-            alignment: 'right',
-            text: `Date:${today}`,
+            alignment: 'left',
+            text: `OR.No/Admin/Stud_Certy/CI033/2022                                                                             Date:${today}`,
             fontSize: 18,
+            bold: true
         },
 
         {
             alignment: 'center',
-            text: 'TO WHOM IT MAY CONCERN:',
-            fontSize: 22,
+            text: 'TO WHOM IT MAY CONCERN',
+            fontSize: 25,
             bold: true,
+            margin: [0, 20],
         },
 
         {
-            text: `This is to certify that ${studentdata.stuGender="Female"?"Miss":"Mr"} ${studentdata.stuTitle} ${studentdata.stuFirstname} ${studentdata.stuMiddlename} ${studentdata.stuLastname}(${studentdata.stuEnroll}) has been bonafide student of Four-yeardegree course in B.E. ${deptName} since _______________. ${studentdata.stuGender="Female"?"Her":"His"} result of B.E. semester I, II, III, IV, V, VI & VII examinations conducted by Gujarat Technology University have been declared and she has passed in all of them(CGPA______)`,
+            text: `This is to certify that ${studentdata.stuFirstname} ${studentdata.stuMiddlename} ${studentdata.stuLastname} (${studentdata.stuEnroll}) was a bonafide student of B.E. ${deptName} of this institute during the period ________ to _________ as a regular mode - full time student. ${studentdata.stuGender="Female"?"She":"He"} was enrolled at Gujarat Technological University where all the Technical Courses leading to Degree Engineering are taught and assessed in English.`,
+            fontSize: 20,
+        },
+        {
+            text: ` ${studentdata.stuGender="Female"?"Her":"His"} result of B.E. semester I, II, III, IV, V, VI, VII & VIII examinations conducted by Gujarat Technological University have been declared and ${studentdata.stuGender="Female"?"she":"he"} has passed in all of them CGPA______ aggregate percentage ________).. ${studentdata.stuGender="Female"?"She":"He"} has no back log in any semester examination.`,
+            fontSize: 20,
+            margin: [0, 10]
+
+        },
+        {
+            text: `${studentdata.stuGender="Female"?"Her":"His"} enrollment number is verified with office records and found correct. ${studentdata.stuGender="Female"?"Her":"His"} character is good during the tenure at Institute. This certificate is issued for further studies.`,
             fontSize: 20,
             margin: [0, 20],
         },
 
         {
-            text: `Presently, ${studentdata.stuGender="Female"?"She":"He"} is studying n B.E. semester VIII & the Gujarat Technological Universuty exam of B.E. semester VIII is likely to be announced by the ___________.`,
-            fontSize: 20,
-            margin: [0, 10],
-        },
-
-        {
-            text: 'This certificate is being issued as a requirement for the purpose Job.',
-            fontSize: 20,
-            margin: [0, 10],
-        },
-
-        {
             alignment: 'left',
-            text: ' Dr. S.D. Toliwal                                                                                                                                   Principal                                                                                                                                   S.V.I.T - Vasad',
-            fontSize: 20,
-            margin: [0, 50],
+            text: 'Dr.S.D. Toliwal                                                                                                                                    Principal                                                                                                                                    SVIT - Vasad',
+            fontSize: 22,
+            margin: [0, 20],
         },
     ]
     console.log(reportDefination4);

@@ -8,7 +8,7 @@ const getreport = async(currentyear, deptName, studentdata) => {
     console.log("*****", deptName);
     let reportDefination2 = [{
             alignment: 'left',
-            text: 'OR.No/Admin/Stud_Certy/CI033/2022                                                                             Date:',
+            text: `OR.No/Admin/Stud_Certy/CI033/2022                                                                             Date:${today}`,
             fontSize: 18,
             bold: true
         },
@@ -22,12 +22,12 @@ const getreport = async(currentyear, deptName, studentdata) => {
         },
 
         {
-            text: `This is to certify that ${studentdata.stuFirstname} ${studentdata.stuMiddlename} ${studentdata.stuLastname} (${studentdata.stuEnroll}) is a bonafide student of B.E. ${deptName} of this institute during the period ________ to till date as a regular mode - full time student. ${studentdata.stuGender="Female"?"She":"He"} is enrolled at Gujrat Technologial University where all the Technical Courses leading to Degree Engineering are taught and assessed in English. ${studentdata.stuGender="Female"?"Her":"His"} result of B.E. semester I, II, III, IV, V, VI & VII examinations conducted by Gujrat Technological University have been declared and ${studentdata.stuGender="Female"?"she":"he"} has passed in all of them. ${studentdata.stuGender="Female"?"She":"He"} has no back log in any semester examination.`,
+            text: `This is to certify that ${studentdata.stuFirstname} ${studentdata.stuMiddlename} ${studentdata.stuLastname} (${studentdata.stuEnroll}) is a bonafide student of B.E. ${deptName} of this institute during the period ________ to till date as a regular mode - full time student. ${studentdata.stuGender="Female"?"She":"He"} is enrolled at Gujarat Technological University where all the Technical Courses leading to Degree Engineering are taught and assessed in English. ${studentdata.stuGender="Female"?"Her":"His"} result of B.E. semester I, II, III, IV, V, VI & VII examinations conducted by Gujarat Technological University have been declared and ${studentdata.stuGender="Female"?"she":"he"} has passed in all of them. ${studentdata.stuGender="Female"?"She":"He"} has no backlog in any semester examination.`,
             fontSize: 20,
         },
 
         {
-            text: `${studentdata.stuGender="Female"?"Her":"His"} enrolment number is verified with office records and found correct. ${studentdata.stuGender="Female"?"Her":"His"} character is good during the tenure at Institute. This certificate is issued for further studies.`,
+            text: `${studentdata.stuGender="Female"?"Her":"His"} enrollment number is verified with office records and found correct. ${studentdata.stuGender="Female"?"Her":"His"} character is good during the tenure at Institute. This certificate is issued for further studies.`,
             fontSize: 20,
             margin: [0, 30],
         },
