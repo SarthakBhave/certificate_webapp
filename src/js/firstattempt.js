@@ -13,7 +13,7 @@ const getreport3 = async(currentyear, deptName, studentdata) => {
         },
         {
             alingment: 'left',
-            text: 'DATE:',
+            text: `DATE:${today}`,
             fontSize: 16,
             margin: [0, 20],
         },
@@ -40,9 +40,9 @@ const getreport3 = async(currentyear, deptName, studentdata) => {
 
         {
             alignment: 'left',
-            text: '(Professor)                                                                                                                                    I/c Principal                                                                                                                                     S.V.I.T.- Vasad.',
-            fontSize: 20,
-            margin: [0, 50],
+            text: 'Dr.S.D. Toliwal                                                                                                                                    Principal                                                                                                                                    SVIT - Vasad',
+            fontSize: 22,
+            margin: [0, 20],
         },
     ]
     console.log(reportDefination3);
